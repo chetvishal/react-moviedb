@@ -4,7 +4,7 @@ import RBCarousel from 'react-bootstrap-carousel'
 
 export function Home(){
 
-    const [nowPlaying, setNowPlaying] =  ([]);
+    const [nowPlaying, setNowPlaying] =  useState([]);
 
     useEffect(() => {
         const fetchAPI = async () => {
