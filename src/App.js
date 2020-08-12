@@ -1,11 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
+import Home from './components/home//Home'
+import MovieDetail from './components/moviedetail/MovieDetail'
 
-function App() {
+export function App() {
   return (
-    <div className="App">
-    </div>
+    <main>
+      <BrowserRouter>
+        <div>
+          <Switch>
+
+            <Route path='/' component={Home} exact />
+            <Route path='/movie/:id' component={MovieDetail} exact />
+            
+          </Switch>
+        </div>
+      </BrowserRouter>
+    </main>
   );
 }
 
