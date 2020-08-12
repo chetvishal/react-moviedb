@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import {fetchMovies} from '../../service/index'
+import {fetchMovies} from '../../service'
 import RBCarousel from 'react-bootstrap-carousel'
 
-const Home = () => {
+export function Home(){
 
-    const [nowPlaying, setNowPlaying] = useState([]);
+    const [nowPlaying, setNowPlaying] =  ([]);
 
     useEffect(() => {
         const fetchAPI = async () => {
@@ -14,14 +14,28 @@ const Home = () => {
         fetchAPI();
     }, []);
     const movies = nowPlaying.slice(0, 5).map((item, index) => {
-    return (
-        <div key={index}>
-            <div className="carousel-center">
+        return (
+            <div style={{ height: 500, width: "100%" }} key={index}>
+              <div className="carousel-center">
                 <img style={{ height: 600 }} src={item.backPoster} alt={item.title} />
+              </div>
+              <div className="carousel-center">
+                <i
+                  className="far fa-play-circle"
+                  style={{ fontSize: 95, color: "#f4c10f" }}
+                ></i>
+              </div>
+              <div
+                className="carousel-caption"
+                style={{ textAlign: "center", fontSize: 35 }}
+              >
+                {item.title}
+              </div>
             </div>
-        </div>
-    );
+          );
 });
+
+console.log(nowPlaying)
 return (
     <div className="container">
         <div className="row">
