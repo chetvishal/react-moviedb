@@ -1,17 +1,20 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 class Navbar extends Component {
 
 
     state = {
-        str: []
+        str: [],
+        url: '',
+        movies: []
     }
     handleChange = (e) => {
         this.setState({
             str: e.target.value.split(" ")
         })
     }
-    handleSubmit = (e) => {
+    handleSubmit =  (e) => {
         const len = this.state.str.length
         const ar = this.state.str
         var char = ''
@@ -23,6 +26,25 @@ class Navbar extends Component {
         console.log(this.state.str.length)
         console.log(char)
         console.log(`https://api.themoviedb.org/3/search/movie?api_key=4b87f1ea1a4141d7781efd43375e746f&language=en-US&page=1&include_adult=false&query=${char}`)
+        this.setState({
+            url: `https://api.themoviedb.org/3/search/movie?api_key=4b87f1ea1a4141d7781efd43375e746f&language=en-US&page=1&include_adult=false&query=${char}`
+        })
+        axios.get(`https://api.themoviedb.org/3/search/movie`, {
+            params: {
+                api_key: `4b87f1ea1a4141d7781efd43375e746f`,
+                language: 'en_US',
+                page: 1,
+                query: char
+            }
+        })
+        .then(res => {
+            console.log(res.data.results)
+        })
+        // console.log(data)
+            
+    }
+    componentDidMount(){
+        
     }
 
     render() {
