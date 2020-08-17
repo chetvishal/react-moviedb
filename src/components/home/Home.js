@@ -114,9 +114,9 @@ export function Home() {
     )
   })
 
-  console.log(topRated)
+  // console.log(topRated)
   return (
-    <div className="container">
+    <div className="container" style={{marginTop: 10}}>
       <div className="row">
         <div className="col">
           <RBCarousel

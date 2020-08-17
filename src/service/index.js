@@ -9,13 +9,6 @@ const genreUrl = `${url}/genre/movie/list`;
 const moviesUrl = `${url}/discover/movie`;
 const personUrl = `${url}/trending/person/week`;
 
-// const nowPlayingUrl = `${url}/movie/now_playing`;
-// const topratedUrl = `${url}/movie/top_rated`;
-// const movieUrl = `${url}/movie`;
-// const genreUrl = `${url}/genre/movie/list`;
-// const moviesUrl = `${url}/discover/movie`;
-// const personUrl = `${url}/trending/person/week`;
-
 export const fetchMovies = async () => {
     try {
         const { data } = await axios.get(nowPlayingUrl, {

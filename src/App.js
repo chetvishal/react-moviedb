@@ -4,11 +4,13 @@ import './App.css';
 import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import Home from './components/home//Home'
 import MovieDetail from './components/moviedetail/MovieDetail'
+import Navbar from './components/Navbar/Navbar';
 
 export function App() {
   return (
     <main>
       <BrowserRouter>
+        <Navbar />
         <div>
           <Switch>
 
