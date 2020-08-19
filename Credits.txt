@@ -1,0 +1,4 @@
+https://stackoverflow.com/questions/573145/get-everything-after-the-dash-in-a-string-in-javascript/35236900
+https://www.youtube.com/watch?v=WG7NBJQzHmc
+https://stackoverflow.com/questions/42060961/react-router-v4-link-for-form
+https://stackoverflow.com/questions/39823681/read-the-current-full-url-with-react
