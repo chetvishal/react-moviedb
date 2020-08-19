@@ -32,7 +32,7 @@ class Navbar extends Component {
         console.log(`https://api.themoviedb.org/3/search/movie?api_key=4b87f1ea1a4141d7781efd43375e746f&language=en-US&page=1&include_adult=false&query=${char}`)
         this.setState({
             url: `https://api.themoviedb.org/3/search/movie?api_key=4b87f1ea1a4141d7781efd43375e746f&language=en-US&page=1&include_adult=false&query=${char}`,
-            code: char
+            code: char.trim()
         })
         axios.get(`https://api.themoviedb.org/3/search/movie`, {
             params: {
