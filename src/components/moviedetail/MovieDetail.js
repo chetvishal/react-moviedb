@@ -31,6 +31,11 @@ export function MovieDetail({ match }) {
 
     const MoviePalyerModal = (props) => {
         const youtubeUrl = "https://www.youtube.com/watch?v=";
+        // const key = `${video.results != null ? video.key  : null }`;
+        console.log('movie deatial')
+        const ckey = video.length ? video[0].key : null
+        const key = ckey;
+        // console.log(ke)
         return (
             <Modal
                 {...props}
@@ -44,7 +49,7 @@ export function MovieDetail({ match }) {
                         id="contained-modal-title-vcenter"
                         style={{ color: "#000000", fontWeight: "bolder" }}
                     >
-                        {detail.title}
+                        { ckey ? detail.title : 'Trailer not available' }
                     </Modal.Title>
                 </Modal.Header>
 
@@ -53,7 +58,8 @@ export function MovieDetail({ match }) {
                 <Modal.Body style={{ backgroundColor: "#000000" }}>
                     <ReactPlayer
                         className="container-fluid"
-                        url={youtubeUrl + video.key}
+                        url={youtubeUrl + key}
+                        alt = "Video not available"
                         playing
                         width="100%"
                     ></ReactPlayer>

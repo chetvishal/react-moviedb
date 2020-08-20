@@ -150,10 +150,10 @@ export const fetchMovieVideos = async (id) => {
                 api_key: apiKey
             }
         })
-        return data['results'][0];
+        return data.results;
     }
     catch (error) {
-
+        // return data['results']
     }
 }
 

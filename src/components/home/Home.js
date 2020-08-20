@@ -140,6 +140,14 @@ export function Home() {
       </div>
 
       <div className="row mt-3">
+        <div className="col">
+          <p className="font-weight-bold" style={{ color: "#5a606b" }}>
+            OUR RECOMENDATION
+          </p>
+        </div>
+      </div>
+
+      <div className="row mt-3">
         {movieList}
       </div>
 
