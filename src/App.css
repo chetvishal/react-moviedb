@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+  font-family: 'Oswald', sans-serif;
+  background-color: #282c34;
+  min-height: 65px;
+  
+}
+
+.navbar-brand{
+  color: 	white
+}
+
+.navbar-brand:hover{
+  color: gold;
+}
+
+.btn{
+  color: white;
+}
+.carousel-caption{
+  font-family: 'Oswald', sans-serif;
+}
+
+.poster-carousel{
+  filter: brightness(90%);
+}
+

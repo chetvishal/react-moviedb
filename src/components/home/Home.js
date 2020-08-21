@@ -32,16 +32,16 @@ export function Home() {
 
   const movies = nowPlaying.slice(0, 5).map((item, index) => {
     return (
-      <div style={{ height: 500, width: "100%" }} key={index}>
+      <div style={{ height: 500, width: "100%", cursor: 'pointer' }} key={index}>
         <div className="carousel-center">
-          <img style={{ height: 600 }} src={item.backPoster} alt={item.title} />
+          <img style={{ height: 600 }} src={item.backPoster} alt={item.title} className="poster-carousel" />
         </div>
-        <div className="carousel-center">
+        {/* <div className="carousel-center">
           <i
             className="far fa-play-circle"
             style={{ fontSize: 95, color: "#f4c10f" }}
           ></i>
-        </div>
+        </div> */}
         <div
           className="carousel-caption"
           style={{ textAlign: "center", fontSize: 35 }}

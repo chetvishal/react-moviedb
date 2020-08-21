@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import RBCarousel from 'react-bootstrap-carousel'
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 
@@ -33,25 +33,35 @@ class searchResult extends Component {
         console.log(this.state.result)
 
         return (
-            <div style={{marginTop: 15}} className="container" >
-            <div className="row mt-3">
-                {
-                    this.state.result && this.state.result.map(res => {
-                        return (
-                            <div className="col-md-3 col-sm-6" key={res.id}>
-                                <div className="card">
-                                    <Link to={`/movie/${res.id}`}>
-                                            <img src={`https://image.tmdb.org/t/p/original/${res.poster_path}`} alt={res.title} className="img-fluid" />
-                                    </Link>
-                                </div>
-                                <div className="mt-3">
-                                    <p style={{ fontWeight: 'bolder' }}>{res.title}</p>
-                                    <p>Rated: {res.vote_average}</p>
+            <div style={{ marginTop: 15 }} className="container" >
+                <div className="row mt-3">
+                    {
+                        this.state.result.length ?
+                            this.state.result && this.state.result.map(res => {
+                                console.log(res.poster_path)
+                                return (
+                                    <div className="col-md-3 col-sm-6" key={res.id}>
+                                        <div className="card">
+                                            <Link to={`/movie/${res.id}`}>
+                                                <img src={`https://image.tmdb.org/t/p/original/${res.poster_path}`} alt={res.title} className="img-fluid" />
+                                            </Link>
+                                        </div>
+                                        <div className="mt-3">
+                                            <p style={{ fontWeight: 'bolder' }}>{res.title}</p>
+                                            <p>Rated: {res.vote_average}</p>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                            :
+                            <div className="row mt-3">
+                                <div className="col">
+                                    <p className="font-weight-bold" style={{ color: "#5a606b" }}>
+                                        NO RESULT
+                                    </p>
                                 </div>
                             </div>
-                        )
-                    })
-                }
+                    }
                 </div>
             </div>
         )
