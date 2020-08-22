@@ -2,3 +2,9 @@ https://stackoverflow.com/questions/573145/get-everything-after-the-dash-in-a-st
 https://www.youtube.com/watch?v=WG7NBJQzHmc
 https://stackoverflow.com/questions/42060961/react-router-v4-link-for-form
 https://stackoverflow.com/questions/39823681/read-the-current-full-url-with-react
+
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },

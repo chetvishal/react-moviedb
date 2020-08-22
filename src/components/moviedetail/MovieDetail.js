@@ -125,12 +125,14 @@ export function MovieDetail({ match }) {
     return (
         <div className="container">
             <div className="row mt-2">
+            
                 <MoviePalyerModal
                     show={isOpen}
                     onHide={() => {
                         setIsOpen(false);
                     }}
                 ></MoviePalyerModal>
+                
                 <div className="col text-center" style={{ width: '100%' }}>
                     <img src={`http://image.tmdb.org/t/p/original/${detail.backdrop_path}`} alt={detail.title} className="img-fluid" />
                     <div className="carousel-center">

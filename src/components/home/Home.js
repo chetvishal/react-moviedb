@@ -188,19 +188,19 @@ export function Home() {
         <div className="col-md-8 col-sm-6" style={{color: "#5a606b"}}>
           <h3>ABOUT ME</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad modi at repellendus suscipit, sequi deserunt! Molestiae facilis ad quidem reprehenderit. Vero quidem eos sunt quas, culpa nisi cupiditate temporibus quisquam tempore numquam blanditiis! Saepe.
+            My name is Chet Vishal Tunju, I'm a BCA grad.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad modi at repellendus suscipit, sequi deserunt! Molestiae facilis ad quidem reprehenderit. Vero quidem eos sunt quas, culpa nisi cupiditate temporibus quisquam tempore numquam blanditiis! Saepe.
+            I love to build apps.
           </p>
           <ul className="list-inline">
             <li className="list-inline-item">
-              <a href="/" style={{color: "#f4c10"}}>
+              <a href="https://www.instagram.com/chet_vishal/" style={{color: "#f4c10"}}>
                 <i className="fab fa-instagram"></i>
               </a>
             </li>
             <li className="list-inline-item">
-              <a href="/" style={{color: "#f4c10"}}>
+              <a href="https://github.com/chetvishal" style={{color: "#f4c10"}}>
                 <i className="fab fa-github"></i>
               </a>
             </li>
