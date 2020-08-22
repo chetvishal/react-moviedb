@@ -38,20 +38,22 @@ class searchResult extends Component {
                     {
                         this.state.result.length ?
                             this.state.result && this.state.result.map(res => {
-                                console.log(res.poster_path)
-                                return (
-                                    <div className="col-md-3 col-sm-6" key={res.id}>
-                                        <div className="card">
-                                            <Link to={`/movie/${res.id}`}>
-                                                <img src={`https://image.tmdb.org/t/p/original/${res.poster_path}`} alt={res.title} className="img-fluid" />
-                                            </Link>
+                                if (res.poster_path) {
+                                    return (
+                                        <div className="col-md-3 col-sm-6" key={res.id}>
+                                            <div className="card">
+                                                <Link to={`/movie/${res.id}`}>
+                                                    <img src={`https://image.tmdb.org/t/p/original/${res.poster_path}`} alt={res.title} className="img-fluid" />
+                                                </Link>
+                                            </div>
+                                            <div className="mt-3">
+                                                <p style={{ fontWeight: 'bolder' }}>{res.title}</p>
+                                                <p>Rated: {res.vote_average}</p>
+                                            </div>
                                         </div>
-                                        <div className="mt-3">
-                                            <p style={{ fontWeight: 'bolder' }}>{res.title}</p>
-                                            <p>Rated: {res.vote_average}</p>
-                                        </div>
-                                    </div>
-                                )
+                                    )
+                                }
+
                             })
                             :
                             <div className="row mt-3">

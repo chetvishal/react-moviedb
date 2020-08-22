@@ -34,7 +34,9 @@ export function Home() {
     return (
       <div style={{ height: 500, width: "100%", cursor: 'pointer' }} key={index}>
         <div className="carousel-center">
+        <Link to={`/movie/${item.id}`}>
           <img style={{ height: 600 }} src={item.backPoster} alt={item.title} className="poster-carousel" />
+          </Link>
         </div>
         {/* <div className="carousel-center">
           <i

@@ -4,7 +4,7 @@ import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 import { Modal } from "react-bootstrap";
 import ReactPlayer from 'react-player';
 import ReactStars from 'react-rating-stars-component';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -49,7 +49,7 @@ export function MovieDetail({ match }) {
                         id="contained-modal-title-vcenter"
                         style={{ color: "#000000", fontWeight: "bolder" }}
                     >
-                        { ckey ? detail.title : 'Trailer not available' }
+                        {ckey ? detail.title : 'Trailer not available'}
                     </Modal.Title>
                 </Modal.Header>
 
@@ -59,7 +59,7 @@ export function MovieDetail({ match }) {
                     <ReactPlayer
                         className="container-fluid"
                         url={youtubeUrl + key}
-                        alt = "Video not available"
+                        alt="Video not available"
                         playing
                         width="100%"
                     ></ReactPlayer>
@@ -83,23 +83,26 @@ export function MovieDetail({ match }) {
     }
 
     const castList = casts.slice(0, 4).map((c, i) => {
-        return (
-            <div className="col-md-3 text-center" key={i}>
+        if (c.id) {
+            console.log(c.id)
+            return (
+                <div className="col-md-3 text-center" key={i}>
 
-                <img className="img-fluid rounded-circle mx-auto d-block"
-                    src={c.id}
-                    alt={c.name} />
+                    <img className="img-fluid rounded-circle mx-auto d-block"
+                        src={c.id}
+                        alt={c.name} />
 
-                <p className="font-weight-bold text-center">{c.name}</p>
-                <p className="font-weight-light text-center" style={{ color: '#5a606b' }}>
-                    {c.character}
-                </p>
+                    <p className="font-weight-bold text-center">{c.name}</p>
+                    <p className="font-weight-light text-center" style={{ color: '#5a606b' }}>
+                        {c.character}
+                    </p>
 
-            </div>
-        )
+                </div>
+            )
+        }
     })
 
-    const movieList = similarMovie.slice(0, 4).map((item, index) => {
+    const movieList =  similarMovie.length ? similarMovie.slice(0, 4).map((item, index) => {
         return (
             <div className="col-md-3 col-sm-6" key={index}>
                 <div className="card">
@@ -114,7 +117,8 @@ export function MovieDetail({ match }) {
                 </div>
             </div>
         )
-    });
+    }) : <div> <p>No Movies to show : /</p></div>
+   
 
     console.log(casts)
 

@@ -39,7 +39,7 @@
 
 .navbar {
   font-family: 'Oswald', sans-serif;
-  background-color: #282c34;
+  background-color: #282c34; /*#282c34*/
   min-height: 65px;
   
 }
@@ -60,6 +60,16 @@
 }
 
 .poster-carousel{
-  filter: brightness(90%);
+  filter: brightness(80%);
 }
 
+/* .navbar-toggler{
+  background-color: white;
+  background-image: none;
+  border: 1px solid white;
+}
+
+.navbar-toggler-icon .icon-bar {
+  background-color: #fff;
+  border-color: white;
+} */
