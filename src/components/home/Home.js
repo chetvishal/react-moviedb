@@ -205,7 +205,7 @@ export function Home() {
               </a>
             </li>
             <li className="list-inline-item">
-              <a href="/" style={{color: "#f4c10"}}>
+              <a href="https://www.linkedin.com/in/chet-vishal-1056b7123/" style={{color: "#f4c10"}}>
                 <i className="fab fa-linkedin"></i>
               </a>
             </li>
