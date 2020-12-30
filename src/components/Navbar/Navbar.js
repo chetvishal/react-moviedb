@@ -58,7 +58,7 @@ class Navbar extends Component {
         return (
             <div>
                 <nav className="navbar navbar-icon-top navbar-expand-lg navbar-light ">
-                    <a className="navbar-brand" href="/" style={{color: 'white'}}>TimesMovies</a>
+                    <a className="navbar-brand" href="/" style={{color: 'white'}}>TimesMovies2</a>
                     <button className="navbar-toggler bg-warning" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon "></span>
                     </button>
