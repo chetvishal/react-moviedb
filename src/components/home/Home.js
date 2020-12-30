@@ -28,6 +28,7 @@ export function Home() {
 
   const handleGenreClick = async (genre_id) => {
     setMovieByGenre(await fetchMovieByGenre(genre_id))
+    console.log(genre_id)
   }
 
   const movies = nowPlaying.slice(0, 5).map((item, index) => {

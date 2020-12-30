@@ -21,7 +21,7 @@ class searchResult extends Component {
     componentDidMount() {
         axios.get(`https://api.themoviedb.org/3/search/movie?api_key=4b87f1ea1a4141d7781efd43375e746f&language=en-US&page=1&include_adult=false&query=${this.getSecondPart(window.location.href)}`)
             .then(res => {
-                console.log(res.data.results)
+                // console.log(res.data.results)
                 this.setState({
                     result: res.data.results
                 })
